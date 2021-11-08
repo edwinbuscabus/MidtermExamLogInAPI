@@ -24,3 +24,10 @@ Auth::routes();
 Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
+
+
+Route::resource('products', App\Http\Controllers\ProductController::class);
+
+Route::resource('orders', App\Http\Controllers\OrderController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);
